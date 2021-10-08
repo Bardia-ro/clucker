@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from microblogs import views as cluckerView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', cluckerView.home , name ='home'),
 ]

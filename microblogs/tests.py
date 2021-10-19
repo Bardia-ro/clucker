@@ -96,7 +96,7 @@ class UserModelTestCase(TestCase):
     
     def _create_second_user(self):
         user = User.objects.create_user(
-            '@bardi',
+            '@bardia',
             first_name = 'bard',
             last_name = 'rok',
             email = 'brokhzadifr@gmail.com',

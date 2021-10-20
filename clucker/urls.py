@@ -20,4 +20,5 @@ from microblogs import views as cluckerView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', cluckerView.home , name ='home'),
+    path('sign_up/', cluckerView.sign_up , name ='sign_up'),
 ]

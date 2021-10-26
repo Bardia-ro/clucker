@@ -1,13 +1,13 @@
 from django.core.exceptions import ValidationError
 from django.test import TestCase
-from .models import User
+from microblogs.models import User
 
 # Create your tests here.
 
 class UserModelTestCase(TestCase):
     def setUp(self):
         self.user = User.objects.create_user(
-            '@bardia',
+            username = '@bardi',
             first_name = 'bard',
             last_name = 'rok',
             email = 'brokhzadifar@gmail.com',
@@ -96,7 +96,7 @@ class UserModelTestCase(TestCase):
     
     def _create_second_user(self):
         user = User.objects.create_user(
-            '@bardia',
+            username = '@bardia',
             first_name = 'bard',
             last_name = 'rok',
             email = 'brokhzadifr@gmail.com',

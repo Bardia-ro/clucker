@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import widgets
-from .models import User
+from .models import Post, User
 
 class SignUpForm(forms.ModelForm):
     class Meta:
@@ -10,3 +10,10 @@ class SignUpForm(forms.ModelForm):
 
     new_password = forms.CharField(label='Password' , widget=forms.PasswordInput())
     password_confirmation = forms.CharField(label='Password confirmation' , widget=forms.PasswordInput())
+
+class PostForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        ordering = ['created_at']
+        fields = ['author', 'text']
+        widgets = {'text': forms.Textarea()}

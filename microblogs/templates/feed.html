@@ -1,0 +1,13 @@
+<html>
+<head>
+    <title>Clucker</title>
+</head>
+    <body>
+        <h1>Feed</h1>
+        <form action="{% url 'feed' %}" method="post">
+          {% csrf_token %}
+           {{ form.as_p }} 
+        <input type= "submit" value="post">
+        <p><a href='{% url 'user_list' %}'>User list</a></p>
+    <body>
+</html>

@@ -17,3 +17,8 @@ class PostForm(forms.ModelForm):
         ordering = ['created_at']
         fields = ['author', 'text']
         widgets = {'text': forms.Textarea()}
+
+
+class LogInForm(forms.Form):
+        username = forms.CharField(label="Username")
+        password = forms.CharField(label = "Password", widget=forms.PasswordInput())

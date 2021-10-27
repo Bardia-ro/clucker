@@ -1,0 +1,14 @@
+<html>
+<head>
+    <title>Clucker's users list</title>
+</head>
+    <center>
+        <h1>Users list: </h1>
+        <br/>
+        {% for users in users_list %}
+        <a href="{% url 'show_user' users.id %}" {{ users }} </a>
+        <p>Username:  {{ users.username }} </p>
+        {% endfor %}
+        <br/>
+    </center>
+</html>

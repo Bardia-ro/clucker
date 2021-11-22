@@ -14,14 +14,12 @@ class User(AbstractUser):
             regex=r'^@\w{3,}$',
             message='username must consist of @ followed by at least 3 alphanumerical'
         )]
-
     )
 
     first_name = models.CharField(unique=False, max_length=50, blank=False)
     last_name = models.CharField(unique=False, max_length=50, blank=False)
     email = models.EmailField(max_length=50, unique=True, blank=False)
     bio = models.TextField()
-
 
 class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, editable=True)

@@ -7,7 +7,7 @@
         <br/>
         {% for users in users_list %}
         <a href="{% url 'show_user' users.id %}" {{ users }} </a>
-        <p>Username:  {{ users.username }} </p>
+        <p><li>Username:  {{ users.username }} </li></p>
         {% endfor %}
         <br/>
     </center>

@@ -50,5 +50,9 @@ def user_list(request):
 
 def show_user(request ,user_id):
     user = User.objects.get(pk = user_id)
-    return render(request, 'show_user.html', {'users' : user} )
+    return render(request, 'show_user.html', {'users' : user})
+
+
+
+
 

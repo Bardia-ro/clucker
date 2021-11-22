@@ -73,11 +73,13 @@ class SignUpsFormTestCase(TestCase):
         self.assertFalse(form.is_valid())
 
     #new password and confirmation are the same
-
     def test_new_password_and_confirmation_are_the_same(self):
         self.form_input['new_password'] = 'Wrongpassword123'
         form = SignUpForm(data=self.form_input)
         self.assertFalse(form.is_valid())
+
+
+    
 
 
     

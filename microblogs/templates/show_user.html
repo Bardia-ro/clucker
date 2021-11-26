@@ -1,11 +1,10 @@
-<html>
-<head>
-    <title>User:</title>
-</head>
-    <center/>
-        <h2>User details for username:  {{ users.username }}</h2>
-        <li>First name:  {{ users.first_name }}</li> 
-        <li>Last name:  {{ users.last_name }}</li>
-        <li>Bio:  {{ users.bio }}</li>
-</center>
-</html>
+{% extends 'base_content.html' %}
+{% block content %}
+<div class="container">
+  <div class="row content">
+    <div class="col-xs-12 col-lg-6 col-xl-4">
+      {% include 'partials/user_profile.html' %}
+    </div>
+  </div>
+</div>
+{% endblock %}
